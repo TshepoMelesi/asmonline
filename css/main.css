@@ -16,6 +16,11 @@ html{
     --header-height : 3em;
 }
 
+a{
+    color : var(--color-400);
+    text-decoration : none;
+}
+
 .dark{
     --color-0 : hsl(0, 0%, 95%);
     --color-100 : hsl(0, 0%, 90%);
