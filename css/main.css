@@ -1,0 +1,236 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    font-family : Roboto;
+    font-size : 14px;
+}
+
+html{
+    scroll-behavior : smooth;
+}
+
+:root{
+    --header-height : 3em;
+}
+
+.dark{
+    --color-0 : hsl(0, 0%, 95%);
+    --color-100 : hsl(0, 0%, 90%);
+    --color-200 : hsl(0, 0%, 70%);
+    --color-300 : hsl(0, 0%, 50%);
+    --color-400 : hsl(0, 0%, 30%);
+    --color-500 : hsl(0, 0%, 10%);
+    --color-600 : hsl(0, 0%, 5%);
+
+    --accent-100 : aqua;    
+}
+
+.light{
+    --color-0 : hsl(0, 0%, 5%);
+    --color-100 : hsl(0, 0%, 10%);
+    --color-200 : hsl(0, 0%, 30%);
+    --color-300 : hsl(0, 0%, 50%);
+    --color-400 : hsl(0, 0%, 70%);
+    --color-500 : hsl(0, 0%, 90%);
+    --color-600 : hsl(0, 0%, 95%);
+
+    --accent-100 : rgb(0, 84, 84);  
+}
+
+body{
+    position : relative;
+    min-height : 100dvh;
+    display : grid;
+    grid-template-columns : 100%;
+    grid-template-rows : var(--header-height) calc(100% - var(--header-height));
+
+    background-color : var(--color-500);
+}
+
+header{
+    height : 100%;
+    width : 100%;
+    display : flex;
+    justify-content : center;
+    align-items: center;
+    background-color : var(--color-100);
+    
+    text-align : center;
+}
+
+.section-title{
+    font-size : 1.8em;
+    margin-block: 1em 0.4em;
+    color : var(--color-100);
+}
+
+.logo {
+    font-family : Arial;
+    font-size : 2em;
+    color : var(--color-400);
+}
+
+.app, .course-list, .course-card{
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+.course-list{
+    padding : 1em;
+    gap : 2em;
+}
+
+.course-card{
+    max-width : 300px;
+    background-color : var(--color-500);
+    padding : 0.5em;
+    box-shadow : 0 0 5px 1px var(--color-200);
+    border-radius : 12px;
+}
+
+.card-thumbnail-container{
+    width : 100%;
+    aspect-ratio : 16 / 9;
+    overflow : hidden;
+    border-radius : 10px;
+}
+
+.card-thumbnail{
+    width: 100%;
+}
+
+.card-title{
+    margin-block : 1em 0.3em;
+    color : var(--color-100);
+    font-size : 1.6em;
+    text-align : center;
+}
+
+.card-duration{
+    margin-bottom : 1em;
+    font-size : 1.4em;
+    color : var(--color-300);
+}
+
+.card-description{
+    margin-bottom : 1em;
+    font-size : 1.4em;
+    color : var(--color-200);
+    text-align : center;
+}
+
+.card-cta{
+    background-color : var(--color-100);
+    color : var(--color-500);
+    padding: 0.4em;
+    font-size : 1.6em;
+    width : 100%;
+    border-radius : 10px;
+    border : none;
+}
+
+.card-price{
+    font-size : 1.3em;
+}
+
+/* ============================================================================= */
+/* SECTION STYLE - HERO */
+/* ============================================================================= */
+.section--hero{
+    margin : 2em 0;
+    width : 100%;
+    display : flex;
+    flex-direction : column-reverse;
+    flex-wrap : wrap;
+    align-items : center;
+    justify-content : center;
+    gap : 1em;
+}
+
+.section--hero .hero--info{
+    color : var(--color-100);
+}
+
+.section--hero .hero--info h3{
+    font-size : calc(2em * 1);
+}
+
+.section--hero .hero--info h2{
+    color : var(--accent-100);
+    font-size : calc(3.16em * 1);
+}
+
+.hero--benefits{
+    margin-block : 0.5em 1em;
+    list-style-position : inside;
+}
+
+.hero--benefit{
+    font-size : 1.6em;
+
+}
+
+.hero--benefit::marker{
+    width : 1em;
+    color : var(--accent-100);
+}
+
+.hero--cta {
+    text-align : center;
+    padding : 1em;
+    font-size : 1.4em;
+    width : 100%;
+    border : 2px solid var(--accent-100);
+    color : var(--accent-100);
+    text-decoration : none;
+    display : block;
+}
+
+
+/* ============================================================================= */
+
+
+
+
+
+/* ============================================================================= */
+/* TOGGLE STYLE */
+/* TODO : A proper toggle
+/* ============================================================================= */
+.toggle-container{
+    top : 0.6em;
+    right : 1em;
+    position : absolute;
+}
+
+.toggle-btn{
+    color : var(--color-100);
+    background-color : var(--color-500);
+    border : none;
+    padding : 0.4em 0.6em;
+}
+
+
+
+
+
+
+
+/* ============================================================================= */
+/* TABLET VIEW
+/* ============================================================================= */
+@media only screen and (min-width : 760px){
+    .section--hero{
+        margin : 4em 2em;
+        display : flex;
+        flex-direction : row;
+        align-items : center;
+        justify-content : center;
+        gap : 4em;
+    }
+}
+/* ============================================================================= */
+/* PC VIEW
+/* ============================================================================= */

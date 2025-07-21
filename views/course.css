@@ -1,0 +1,311 @@
+/* ========================================================= */
+/* CONTENT STYLES */
+/* ========================================================= */
+.grid{
+    display : grid;
+    grid-template-columns : repeat(2, 1fr);
+}
+ul.illu-3{
+    padding : 0.4em;
+    border : 1px solid var(--accent-100);
+    width : min(100%, 500px);
+    padding : 0.4em;
+}
+ul.illu-3 li{
+    color : var(--color-100);
+    padding-left : 1em;
+    display : grid;
+    grid-template-columns : 10% auto;
+    align-items: center;
+}
+ul.illu-3 li:nth-child(even){
+    background-color : var(--color-100);
+}
+
+ul.illu-3 li:nth-child(even) p{
+    color : var(--color-500);
+}
+
+.app{
+    padding : 0 1em;
+}
+
+.section--course{
+    width : 100%;
+    max-width : 500px;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+.section--course .course-title{
+    text-align : center;
+    color : var(--color-100);
+    font-size : 2em;
+    margin-block : 1em 0.2em;
+}
+
+.meta-container{
+    text-align : center;
+    margin-bottom : 2em;
+}
+
+.meta-container .authors{
+    color : var(--color-300);
+    display : flex;
+    gap : 1em;
+}
+
+
+.meta-container .course-duration{
+    color : var(--color-200);
+}
+
+.course--content{
+    width : 100%;
+}
+
+.course-thumbnail{
+    width: 100%;
+    aspect-ratio : 16 / 5;
+    overflow : hidden;
+    margin-bottom : 1.2em;
+}
+
+.course-thumbnail img{
+    width : 100%;
+}
+
+.course--content .content,
+.course--content .content .chapter{
+    display : flex;
+    flex-direction : column;
+    gap : 0.4em;
+}
+
+.course--content .content p.content--p{
+    font-size : 1.6em;
+    padding : 0.6em;
+    color : var(--color-100);
+}
+
+.chapter .chapter-title{
+    font-size : 1.6em;
+    color : var(--accent-100);
+    border : 1px solid var(--accent-100);
+    padding : 0.4em;
+}
+details, summary{
+    border : none;
+    outline : none;
+}
+summary:focus{
+    background-color : var(--color-400);
+}
+details[open]{
+    margin-bottom : 1em;
+}
+
+/* ========================================================= */
+/* MATH STYLES */
+/* ========================================================= */
+.expression{
+    width : 100%;
+    background-color : black;
+    padding : 1em;
+    justify-content : center;
+    color : white;
+    display : inline-flex;
+    align-items : center;
+    gap : 1em;
+}
+.expression p.big{
+    color : white;
+    font-size : 2em;
+}
+.fraction{
+    width : fit-content;
+    display : inline-flex;
+    flex-direction : column;
+    align-items : center;
+    justify-content : center;
+    font-size : 1em;
+}
+div.content--p p{
+    font-size : 1.4em;
+    display : inline-flex;
+    color :var(--color-100);
+}
+.fraction.big p{
+    font-size : 2em;
+}
+.fraction.small p{
+    display : inline;
+    font-size : 1em;
+}
+.line{
+    width : 100%;
+    height : 2px;
+    background-color : white;
+} 
+
+ul.illu-3 li:nth-child(even) .fraction .line{
+    background-color : var(--color-500);
+}
+
+
+/* ========================================================================= */
+/* QUIZZ BOX */
+/* ========================================================================= */
+
+.request-btn, .next-btn{
+    width : 100%;
+    font-size : 1.6em;
+    padding : 0.6em;
+    color : var(--color-500);
+    background-color : aqua;
+    border: none;
+    outline : none;
+}
+
+.options{
+    display: grid;
+    grid-template-columns : repeat(2, 1fr);
+}
+.options .choice {
+    padding: 0.4em;
+    font-size : 1.4em;
+    text-align : center;
+    position : relative;
+    background-color : skyblue;
+    margin: 0.2em;
+}
+.options .choice input[type="radio"]{
+    position : absolute;
+    top : 0;
+    left : 0;
+
+    width : fit-content;
+    height : 100%;
+    opacity : 0;
+}
+
+.options .choice:has(input[type="radio"]:checked) {
+    background-color : hsl(197, 52%, 48%);
+}
+
+.quizz-box button{
+    background-color : var(--accent-100);
+}
+
+.question-container{
+    width : 100%;
+    text-align : center;
+
+    padding-block : 2em;
+
+    background-color : black;
+    color : white;
+}
+
+.results-container{
+    width : 100%;
+    overflow : hidden;
+    background-color : skyblue;
+    padding : 1em;
+
+    text-align : center;
+}
+
+.results-container h2{
+    font-size : 3em;
+}
+.results-container h3{
+    font-size : 2em;
+    margin-block : 1em 0.4em;
+}
+
+.percent{
+    font-size : 5em;
+    font-weight : bold;
+
+    animation: dance 2s linear infinite;
+}
+
+@keyframes dance {
+    0%{
+        transform : scale(1, 1) rotateZ(0);
+    }
+    10%{
+        transform : scale(1.3, 1.3) rotateZ(5deg);
+    }
+    20%{
+        transform : scale(1.3, 1.3) rotateZ(0deg);
+    }
+    30%{
+        transform : scale(1.3, 1.3) rotateZ(-5deg);
+    }
+    
+    40%{
+        transform : scale(1.3, 1.3) rotateZ(90deg);
+    }
+
+    50%{
+        transform : scale(1.3, 1.3) rotateZ(180deg);
+    }
+    
+    60%{
+        transform : scale(1.3, 1.3) rotateZ(85deg);
+    }
+    70%{
+        transform : scale(1.3, 1.3) rotateZ(-5deg);
+    }
+    80%{
+        transform : scale(1.3, 1.3) rotateZ(0deg);
+    }
+    90%{
+        transform : scale(1, 1) rotateZ(5deg);
+    }
+}
+.fill-in{
+    width : 100%;
+    text-align : center;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    gap : 1em;
+    padding : 1em;
+}
+
+.fill-in .line{
+    height : 10px;
+    border-radius : 10px;
+    background-color : var(--color-500);
+    margin-block : 0.4em;
+}
+.fill-in .numerator {
+    display : flex;
+    gap : 1em;
+}
+.fill-in .numerator p{
+    font-size : 2em;
+    color : var(--color-500);
+}
+.fill-in .expression input[type=number]{
+    border : 2px solid var(--color-300);
+    border-radius : 10px;
+    outline : none;
+    font-size : 2em;
+    width : 1.4em;
+    text-align : center;
+}
+
+.step {
+    color : var(--accent-100);
+    font-weight : bold;
+    font-size : 1.2em;
+}
+
+.fill-in .expression{
+    background-color :  var(--color-100);
+}
