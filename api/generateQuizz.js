@@ -5,7 +5,8 @@ const random = (max = 1, min = 0) => {
 export default function generateQuizz(req, res){
   const operators = ["+", "-", "*", "/"]
   const terms = []
-  const termsTotal = random(5)
+  const defaultTotal = 2
+  const termsTotal = random(5) < 1 ? defaultTotal
   
   for(let i = 0; i < termsTotal; i++){
     terms.push(random(20, 2))
