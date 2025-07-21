@@ -10,7 +10,7 @@ export default function generateQuizz(req, res){
   for(let i = 0; i < termsTotal; i++){
     terms.push(random(20, 2))
 
-    if(i < termsTotal) terms.push(operators[random(operators.length-1)])
+    if(i != termsTotal - 1) terms.push(operators[random(operators.length-1)])
   }
   res.status(200).json({question : terms})
 }
