@@ -2,13 +2,51 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="./css/main.css">
+        <!-- <link rel="stylesheet" href="./css/main.css"> -->
+        <style>
+            body{
+                font-family : Roboto;
+                overflow:hidden;
+                height : 100dvh;
+                width : 100dvw;
+
+                display : flex;
+                justify-content : center;
+                align-items : center;
+                
+                --color-100 : hsl(360, 100%, 50%);
+                --color-200 : hsl(360, 100%, 75%);
+                --color-300 : hsl(360, 100%, 90%);
+                
+                background-color : var(--color-300);
+            }
+
+            .error-container{
+                width : min(500px, 100%);
+                padding : 1em;
+                border-radius : 1em;
+                background-color : var(--color-200);
+            }
+            .error{
+                color : var(--color-100);
+                font-weight : bold;
+            }
+            .error-message{
+                font-size : 1.4em;
+                color : red;
+            }
+            .error-action{
+                color : red;
+            }
+        </style>
         <meta name="viewport" content="maximum-width=device-width, initial-scale=1.0">
         <title>Home - Afolics</title>
     </head>
     <body id="body">
-      <h1>404 Error!</h1>
-      <p>What you are looking for cannot be found!</p>
-      <p> Go back <a href="/index.html">home</a></p>
+      <main class="error-container">
+        <h1 class="error">404 Error!!!</h1>
+        <p class="error-message">What you are looking for cannot be found!</p>
+        <p class="error-action"> Go back <a href="/index.html">home</a></p>
+      </main>
     </body>
 </html>
