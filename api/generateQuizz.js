@@ -6,8 +6,7 @@ export default function generateQuizz(req, res){
   const operators = ["+", "-", "*", "/"]
   const terms = []
   const defaultTotal = 2
-  const random = random(5)
-  const termsTotal = random <= 1 ? 2 : random
+  const termsTotal = random(10, 2)
   
   for(let i = 0; i < termsTotal; i++){
     terms.push(random(20, 2))
