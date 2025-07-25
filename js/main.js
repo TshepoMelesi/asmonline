@@ -10,5 +10,4 @@ const toggleTheme = () => {
 
 toggleBtn.onclick = () => {
     toggleTheme()
-    console.log("g")
 }

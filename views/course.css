@@ -157,8 +157,35 @@ ul.illu-3 li:nth-child(even) .fraction .line{
 /* ========================================================================= */
 /* QUIZZ BOX */
 /* ========================================================================= */
+.quizz-box {
+    box-shadow: 0px 0px 6px 2px #00000096;
+    background-color: var(--color-400);
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    text-align: center;
+    border-radius : 1em;
+}
+
+.quizz-container{
+    border : 2px solid white;
+    display: flex;
+    gap : 0.5em;
+    flex-direction : column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.quizz-title{
+    font-size: 2em;
+    margin-bottom: 0.6em;
+}
 
 .request-btn, .next-btn{
+    border-radius : 0.5em;
     width : 100%;
     font-size : 1.6em;
     padding : 0.6em;
@@ -170,32 +197,42 @@ ul.illu-3 li:nth-child(even) .fraction .line{
 
 .options{
     display: grid;
-    grid-template-columns : repeat(2, 1fr);
+    gap : 0.6em;
+    grid-template-columns : 100%;
+    margin : 1em 0;
 }
 .options .choice {
+    width : 100%;
     padding: 0.4em;
     font-size : 1.4em;
     text-align : center;
     position : relative;
     background-color : skyblue;
-    margin: 0.2em;
 }
-.options .choice input[type="radio"]{
-    position : absolute;
-    top : 0;
-    left : 0;
 
-    width : fit-content;
-    height : 100%;
-    opacity : 0;
+.options .choice p {
+    font-size: 1.4em;
+    color: hsl(197 71% 25% / 1);
+}
+
+.options .choice input[type="radio"]
+ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
 }
 
 .options .choice:has(input[type="radio"]:checked) {
     background-color : hsl(197, 52%, 48%);
 }
 
-.quizz-box button{
-    background-color : var(--accent-100);
+.quizz-box button {
+    color: hsl(206.52deg 95% 65%);
+    border: 3px solid hsl(207 100% 25% / 1);
+    background-color: hsl(207 100% 20% / 1);
 }
 
 .question-container{
@@ -207,6 +244,10 @@ ul.illu-3 li:nth-child(even) .fraction .line{
     background-color : black;
     color : white;
 }
+
+.question-container .question{
+    font-size : 2em;
+    }
 
 .results-container{
     width : 100%;

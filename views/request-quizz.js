@@ -161,16 +161,19 @@ const formatQuizz = (quizz) => {
     if(quizz.type === "MCQ"){
         return `
             <div>
-                <div class="question-container">
-                    <h2 class="question">${quizz.question}</h2>
-                </div>
+                <h2 class="quizz-title">Quizz Box</h2>
+                <div class="quizz-container">
+                    <div class="question-container">
+                        <h2 class="question">${quizz.question}</h2>
+                    </div>
 
-                <div class="options">
-                    ${quizz.options.map(o => formatChoice(quizz.id, o)).join("")}
+                    <div class="options">
+                        ${quizz.options.map(o => formatChoice(quizz.id, o)).join("")}
+                    </div>
+                    <button class="next-btn" onclick="displayQuizz(this, true)">
+                        next quizz
+                    </button>
                 </div>
-                <button class="next-btn" onclick="displayQuizz(this, true)">
-                    next quizz
-                </button>
             </div>
             `
     }else if(quizz.type === "fill-in"){
@@ -259,6 +262,7 @@ const displayQuizz = (e, gettingNextQuestion = false) => {
     quizzContainer.innerHTML = ""
 
     currentQuestion = questions.shift()
+    
     // display quizz
     quizzContainer.innerHTML = formatQuizz(currentQuestion)
 }
@@ -317,8 +321,6 @@ class Expression{
         return `<div class="expression">${expression}</div>`
     }
 }
-
-// const myExp = new Expression([["6xy", "x+4"], "+", "5"])
 
 const getFactors = (number) => {
     if(typeof number !== "number") return alert("Cannot get factors...")
