@@ -12,6 +12,6 @@ toggleBtn.onclick = () => {
     toggleTheme()
 }
 
-const handlePayment => {
+const handlePayment = () => {
     window.location.href = '/api/payfast'
 }
