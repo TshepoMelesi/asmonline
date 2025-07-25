@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="./course.css">
+        <meta name="viewport" content="maximum-width=device-width, initial-scale=1.0">
+        <title>Home - Afolics</title>
+    </head>
+    <body id="body">
+        <header>
+            <a href="../index.html"><h1 class="logo">asm</h1></a>
+        </header>
+
+        <form action="https://sandbox.payfast.co.za/eng/process" method="post">
+            <input type="hidden" name="merchant_id" value="10040716">
+            <input type="hidden" name="merchant_key" value="knxxvrv11ap1w">
+            <input type="hidden" name="amount" value="300.00">
+            <input type="hidden" name="item_name" value="course">
+            <input type="submit">
+         </form>
+
+        <script>
+            body.classList.add("dark")
+
+            const toggleTheme = () => {
+                if(body.classList[0] === "dark"){
+                    body.classList = "light"
+                } else{
+                    body.classList = "dark"
+                }
+            }
+
+            toggleBtn.onclick = () => {
+                toggleTheme()
+                console.log("g")
+            }
+        </script>
+
+        <script src="request-quizz.js"></script>
+    </body>
+</html>
