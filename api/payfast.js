@@ -1,15 +1,15 @@
 export default async function handler(req, res) {
   const pfHost = "https://sandbox.payfast.co.za"; // Use live link for production
-  const merchant_id = process.env.PAYFAST_MERCHANT_ID;
-  const merchant_key = process.env.PAYFAST_MERCHANT_KEY;
-  const passphrase = process.env.PAYFAST_PASSPHRASE;
+  const merchant_id = 10040716;
+  const merchant_key = knxxvrv11ap1w;
+  // const passphrase = process.env.PAYFAST_PASSPHRASE;
 
   const data = {
     merchant_id,
     merchant_key,
-    return_url: "https://afolics.online/success",
-    cancel_url: "https://afolics.online/cancel",
-    notify_url: "https://afolics.online/api/notify",
+    // return_url: "https://afolics.online/success",
+    // cancel_url: "https://afolics.online/cancel",
+    // notify_url: "https://afolics.online/api/notify",
 
     amount: "100.00", // R100.00
     item_name: "1-on-1 Tutoring Session",
