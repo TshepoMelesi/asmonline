@@ -1,0 +1,38 @@
+.question {
+	height : 100%;
+	display : flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.operator{
+	color : hsl(360, 100%, 65%);
+}
+
+.expression{
+	display : flex;
+	align-items: center;
+	gap : 1em;
+}
+
+.fraction{
+	text-align : center;
+}
+
+.fraction .line{
+	min-width : 1.2em;
+	height : 3px;
+	background-color : hsl(20, 100%, 50%);
+	border-radius : 3px;
+}
+
+.level1{
+	font-size : 2em;
+}
+
+.level2{
+	font-size : 1.2em;
+}
+
+
+

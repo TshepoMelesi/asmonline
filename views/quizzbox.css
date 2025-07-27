@@ -1,0 +1,111 @@
+main {
+	display : flex;
+	justify-content : center;
+	
+	--color-base : 200;
+	--color-100 : hsl(var(--color-base), 100%, 5%);
+	--color-200 : hsl(var(--color-base), 100%, 15%);
+	--color-300 : hsl(var(--color-base), 100%, 25%);
+	--color-400 : hsl(var(--color-base), 100%, 50%);
+	--color-500 : hsl(var(--color-base), 100%, 75%);
+	--color-600 : hsl(var(--color-base), 100%, 85%);
+	--color-700 : hsl(var(--color-base), 100%, 95%);
+	
+	background-color : var(--color-600);
+}
+
+.quizzbox-container{
+	width : min(500px, 100%);
+	height : fit-content;
+	padding : 1em;
+	border-radius : 1em;
+	margin-block : 1em;
+
+	/* background-color : var(--color-400); */
+	display: flex;
+	flex-direction : column;
+	align-items: center;
+}
+
+.quizzbox-container .title{
+	font-size : 2.6em;
+	margin-block : 1em 1.3em;
+}
+.quizzbox-container .description {
+	font-size : 1.2em;
+}
+
+.quizzbox-container .question-container {
+	min-height : 10em;
+	width : 100%;
+
+	margin-block : 1em;
+	
+	display : flex;
+	justify-content : center;
+	align-items : center;
+
+	background-color : var(--color-700);
+}
+
+.operation-container, .difficulty-container{
+	width : 100%;
+	background-color : inherit;
+	/* margin-block : 1em; */
+	display : flex;
+	gap : 0.2em;
+	grid-template-columns : repeat(4, 1fr);
+}
+
+.operation-container label, .difficulty-container label{
+	background-color : var(--color-600);
+	padding : 0.4em;
+	position : relative;
+	cursor : pointer;
+	border : 2px solid var(--color-600);
+	opacity : 0.5;
+}
+
+.operation-container label input, .difficulty-container label input{
+	position : absolute;
+	opacity : 0;
+}
+
+.operation-container label:has(input[type="radio"]:checked),
+.difficulty-container label:has(input[type="radio"]:checked){
+	background-color : var(--color-700);
+	border-color : var(--color-600);
+	opacity : 1;
+}
+
+.question {
+	display : flex;
+	gap : 0.4em;
+}
+
+.controls-container{
+	width : 100%;
+	display : grid;
+	grid-template-columns : repeat(2, 1fr);
+}
+
+.controls-container button{
+	width : 100%;
+	border : none;
+	outline : none;
+
+	background-color : inherit;
+	cursor : pointer;	
+	padding : 0.5em;
+	font-size : 1.2em;
+}
+
+.controls-container button.next-btn{
+	background-color : var(--color-700);
+	border-radius : 0.4em;
+}
+
+.controls-container button.answer-btn{
+	opacity : 0.5;
+	cursor : not-allowed;
+}

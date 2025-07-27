@@ -86,23 +86,23 @@ const getAddFractions = () => {
     <div class="expression">
         <div class="fraction big illu-item">
             <div class="numerator">
-                <p>${fraction[0]}</p>
+                <p class="level1">${fraction[0]}</p>
             </div>
             <div class="line"></div>
             <div class="denomerator">
-                <p>${fraction[1]}</p>
+                <p class="level1">${fraction[1]}</p>
             </div>
         </div>
 
-        <p class="big"> + </p>
+        <p class="big level1"> + </p>
 
         <div class="fraction big illu-item">
             <div class="numerator">
-                <p>${fraction[2]}</p>
+                <p class="level1">${fraction[2]}</p>
             </div>
             <div class="line"></div>
             <div class="denomerator">
-                <p>${fraction[3]}</p>
+                <p class="level1">${fraction[3]}</p>
             </div>
         </div>
     </div>

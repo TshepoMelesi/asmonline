@@ -138,6 +138,13 @@ header{
     border : none;
 }
 
+.quizzes{
+    display : block;
+    font-size : 1.2em;
+    padding-top : 0.4em;
+    color : var(--accent-100);
+}
+
 .card-price{
     font-size : 1.3em;
 }

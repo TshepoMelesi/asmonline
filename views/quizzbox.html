@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="./math.css">
+        <!-- <link rel="stylesheet" href="./course.css"> -->
+        <link rel="stylesheet" href="./quizzbox.css">
+        <meta name="viewport" content="maximum-width=device-width, initial-scale=1.0">
+        <title>Home - Afolics</title>
+    </head>
+    <body id="body">
+    
+        <header>
+            <a href="../index.html"><h1 class="logo">asm</h1></a>
+        </header>
+        
+        <main>
+            <div class="quizzbox-container">
+            
+                <div class="title-container">
+                    <h2 class="title">Quizz Box</h2>
+                </div>
+
+                <div class="description-container">
+                    <p class="description">calculate this expression</p>
+                </div>
+
+                <div class="question-container">
+                    <div class="question"></div>
+                </div>
+                
+                <div class="operation-container">
+                    <label for="addition">
+                        Addition
+                        <input class="operation" type="radio" name="operation" id="addition" checked/>
+                    </label>
+                    <label for="subtraction">
+                        Subtraction
+                        <input class="operation" type="radio" name="operation" id="subtraction"/>
+                    </label>
+                    <label for="multiplication">
+                        Multiplication
+                        <input class="operation" type="radio" name="operation" id="multiplication"/>
+                    </label>
+                    <label for="division">
+                        Division
+                        <input class="operation" type="radio" name="operation" id="division"/>
+                    </label>
+                    <label for="all">
+                        All
+                        <input class="operation" type="radio" name="operation" id="all"/>
+                    </label>
+                </div>                
+                <div class="difficulty-container">
+                    <label for="beginner">
+                        Beginner
+                        <input class="operation difficulty" type="radio" name="difficulty" id="beginner" checked/>
+                    </label>
+                    <label for="intermediate">
+                        Intermediate
+                        <input class="operation difficulty" type="radio" name="difficulty" id="intermediate"/>
+                    </label>
+                    <label for="master">
+                        Master
+                        <input class="operation difficulty" type="radio" name="difficulty" id="master"/>
+                    </label>
+                </div>
+                
+                <div class="controls-container">
+                    <button class="answer-btn">reveal answer</button>
+                    <button class="next-btn">next</button>
+                </div>
+            </div>
+        </main>
+        
+        <script src="request-quizz.js"></script>
+        <script src="quizzbox.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+                
+
