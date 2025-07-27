@@ -51,10 +51,9 @@ main {
 .operation-container, .difficulty-container{
 	width : 100%;
 	background-color : inherit;
-	/* margin-block : 1em; */
 	display : flex;
+	flex-wrap : wrap;
 	gap : 0.2em;
-	grid-template-columns : repeat(4, 1fr);
 }
 
 .operation-container label, .difficulty-container label{
