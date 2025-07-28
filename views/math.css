@@ -5,6 +5,11 @@
 	justify-content: center;
 }
 
+.operator-answer{
+	font-size : 1.6em;
+	margin-right : 1em;
+}
+
 .operator{
 	color : hsl(360, 100%, 65%);
 }

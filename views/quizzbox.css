@@ -48,6 +48,28 @@ main {
 	background-color : var(--color-700);
 }
 
+.question-container{
+	position : relative;
+	overflow : hidden;
+}
+
+.question-container .answer{
+	position : absolute;
+
+	background-color : skyblue;
+	display : flex;
+	justify-content : left;
+	align-items : center;
+	padding-inline : 1em;
+	
+	width : fit-content;
+	height : 100%;
+	top : 0;
+	right : 0;
+	
+	transition : all 200ms ease-in;
+}
+
 .operation-container, .difficulty-container{
 	width : 100%;
 	background-color : inherit;
