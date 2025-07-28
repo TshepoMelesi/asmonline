@@ -125,8 +125,3 @@ main {
 	background-color : var(--color-700);
 	border-radius : 0.4em;
 }
-
-.controls-container button.answer-btn{
-	opacity : 0.5;
-	cursor : not-allowed;
-}
