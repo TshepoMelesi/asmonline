@@ -79,7 +79,7 @@ function evaluate(expr) {
 
 
 const generateFraction = () => {
-	return [random(10, 1), random(10, 0)]
+	return [random(10, 1), random(10, 1)]
 }
 
 const createElem = (type, className) => {
